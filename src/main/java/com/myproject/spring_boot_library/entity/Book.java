@@ -1,12 +1,13 @@
 package com.myproject.spring_boot_library.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "book")
 @Data
 public class Book {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -16,7 +17,7 @@ public class Book {
     private String title;
 
     @Column(name = "author")
-    private  String author;
+    private String author;
 
     @Column(name = "description")
     private String description;
