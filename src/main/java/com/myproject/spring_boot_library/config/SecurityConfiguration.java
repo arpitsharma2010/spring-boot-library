@@ -31,10 +31,8 @@ public class SecurityConfiguration {
         // Enable OAuth2 Resource Server support and JWT validation
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
-        // Add CORS configuration
         http.cors(cors -> {});
 
-        // Add content negotiation strategy
         http.setSharedObject(ContentNegotiationStrategy.class, new HeaderContentNegotiationStrategy());
 
         // Configure custom 401 error response for OAuth2
